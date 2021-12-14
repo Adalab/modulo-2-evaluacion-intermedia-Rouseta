@@ -1,8 +1,29 @@
-@import 'core/variables';
-@import 'core/reset';
-@import 'components/code';
-@import 'components/links';
-@import 'layout/page';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'pages/index';
+.page {
+  border: 3px green solid;
+  width: 50vw;
+}
+.paragraph {
+  width: 300px;
+  height: 20px;
+  border: gray solid 1px;
+  margin-left: 10px;
+}
+.btn__js__generalresult {
+  width: 110px;
+  background-color: #089d8d;
+  color: white;
+}
+.button {
+  background-color: #089d8d;
+  color: white;
+}
+.title {
+  margin-left: 10px;
+
+  &__second {
+    margin-left: 10px;
+  }
+}
+.game {
+  margin-left: 10px;
+}
