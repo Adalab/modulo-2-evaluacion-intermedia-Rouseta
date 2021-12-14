@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adalab Web Starter Kit</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="icon" href="./assets/images/favicon.png" />
+  </head>
+  <body>
+    <main>
+      <h1>Juego Piedra, Papel y Tijera</h1>
+
+      <h2>Introdude aquí tu jugada</h2>
+      <select id="game" class="js_game" name="game">
+        <option class="js__piedra" value="piedra">Piedra</option>
+        <option class="js__papel" value="papel">Papel</option>
+        <option class="js__tijera" value="tijera">Tijera</option>
+      </select>
+      <input class="button js_button" value="Jugar" type="submit" />
+      <p class="paragraph btn__js__generalresult">¡Vamos a jugar!</p>
+      <p class="paragraph btn__js__playeresult">
+        Jugador:
+        <span class="counts__gamer js_counts__player">0</span>
+      </p>
+      <p class="paragraph js__computerresult">
+        Computadora:
+        <span class="counts__computer js-counts__computer">1</span>
+      </p>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
