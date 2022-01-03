@@ -22,10 +22,9 @@ function handleClickGame(event) {
     getRandomNumber();
     getuserTool();
     compareResults();
-    counters();
+    totalRounds()
 
-    // totalRounds()
-    //console.log("hola");
+
 }
 
 //2. Get random number
@@ -81,6 +80,7 @@ function compareResults() {
         renderButton("¡Has perdido!");
         computerVictory();
     }
+
 }
 //5.counter winner (2 functions)
 
@@ -95,15 +95,18 @@ function computerVictory() {
     computerResult.innerHTML = computerWin;
 }
 
-function counters() {
-    playerVictory();
-    computerVictory();
-
-
+function counter() {
+    playerVictory()
+    computerVictory()
 }
+
+
+
+
+
 function totalRounds() {
-    totalGame++
-    totalGame.innerHTML = totalGame;
+    totalGame + 1
+    totalPlayed.innerHTML = totalGame;
 
 
 
