@@ -17,21 +17,28 @@
 
       <h2 class="title__second">Introdude aquí tu jugada</h2>
 
-      <select id="game" class="game js_game" name="game">
-        <option class="js__piedra" value="piedra">Piedra</option>
-        <option class="js__papel" value="papel">Papel</option>
-        <option class="js__tijera" value="tijera">Tijera</option>
-      </select>
-      <input class="button js_button" value="Jugar" type="submit" />
-      <p class="paragraph btn__js__generalresult">¡Vamos a jugar!</p>
-      <p class="paragraph btn__js__playeresult">
-        Jugador:
-        <span class="counts__gamer js_counts__player">0</span>
-      </p>
-      <p class="paragraph js__computerresult">
-        Computadora:
-        <span class="counts__computer js-counts__computer">1</span>
-      </p>
+      <form>
+        <select id="game" class="game js_game" name="game">
+          <option class="js__piedra" value="piedra">Piedra</option>
+          <option class="js__papel" value="papel">Papel</option>
+          <option class="js__tijera" value="tijera">Tijera</option>
+        </select>
+
+        <input class="button js_button" value="Jugar" type="submit" />
+        <p class="paragraph btn__js__generalresult">¡Vamos a jugar!</p>
+        <p class="paragraph btn__js__playeresult">
+          Jugador:
+          <span class="counts__gamer js_counts__player">0</span>
+        </p>
+        <p class="paragraph js__computerresult">
+          Computadora:
+          <span class="counts__computer js-counts__computer">1</span>
+        </p>
+        <p class="paragraph js__totalplayed">
+          Número de partidas:
+          <span class="counts__computer js-counts__total">1</span>
+        </p>
+      </form>
     </main>
     <script src="./assets/js/main.js"></script>
   </body>

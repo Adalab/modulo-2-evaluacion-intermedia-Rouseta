@@ -8,8 +8,10 @@ const gameSelector = document.querySelector(".js_game");
 const btnGameResult = document.querySelector(".btn__js__generalresult");
 const playerResult = document.querySelector(".js_counts__player");
 const computerResult = document.querySelector(".js-counts__computer");
+const totalPlayed = document.querySelector('.js-counts__total');
 let userWin = 0;
 let computerWin = 0;
+let totalGame = 0;
 
 //Function
 
@@ -21,6 +23,8 @@ function handleClickGame(event) {
     getuserTool();
     compareResults();
     counters();
+
+    // totalRounds()
     //console.log("hola");
 }
 
@@ -45,13 +49,15 @@ function getuserTool() {
         randomTool = "tijera";
     }
 }
-//4.Results comparition
+
 function renderButton(render) {
     btnGameResult.innerHTML = render;
 }
+//4.Results comparition
 
 function compareResults() {
     let userSelection = gameSelector.value;
+    totalGame++;
 
     if (userSelection === randomTool) {
         renderButton("Empate");
@@ -88,9 +94,19 @@ function computerVictory() {
     computerWin++;
     computerResult.innerHTML = computerWin;
 }
+
 function counters() {
     playerVictory();
     computerVictory();
+
+
+}
+function totalRounds() {
+    totalGame++
+    totalGame.innerHTML = totalGame;
+
+
+
 
 }
 
