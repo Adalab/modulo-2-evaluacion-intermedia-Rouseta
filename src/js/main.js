@@ -10,6 +10,7 @@ const btnGameResult = document.querySelector(".btn__js__generalresult");
 const playerResult = document.querySelector(".js_counts__player");
 const computerResult = document.querySelector(".js-counts__computer");
 const totalPlayed = document.querySelector('.js-counts__total');
+let randomNumber = 0;
 let userWin = 0;
 let computerWin = 0;
 let totalGame = 0;
@@ -21,7 +22,8 @@ let totalGame = 0;
 
 function handleClickGame(event) {
     event.preventDefault();
-    getRandomNumber();
+
+    randomNumber = getRandomNumber(10) - 1;
     getuserTool();
     compareResults();
     totalRounds()
@@ -34,7 +36,7 @@ function handleClickGame(event) {
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
-const randomNumber = getRandomNumber(10) - 1;
+
 
 let randomTool = "";
 let user;
@@ -115,10 +117,14 @@ function totalRounds() {
 
 }
 function resetGame(event) {
+    userWin = 0;
+    computerWin = 0;
+    totalGame = 0;
+
     event.preventDefault();
-    playerResult.innerHTML = 0;
-    computerResult.innerHTML = 0;
-    totalPlayed.innerHTML = 0;
+    playerResult.innerHTML = "";
+    computerResult.innerHTML = "";
+    totalPlayed.innerHTML = "";
     btnGameResult.innerHTML = "¡Vamos a jugar!"
 
 
