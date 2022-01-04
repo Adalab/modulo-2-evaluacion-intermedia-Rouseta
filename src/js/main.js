@@ -4,6 +4,7 @@
 
 //Declarar constantes globales
 const playButton = document.querySelector(".js_button");
+const resetButton = document.querySelector(".js_button__reset");
 const gameSelector = document.querySelector(".js_game");
 const btnGameResult = document.querySelector(".btn__js__generalresult");
 const playerResult = document.querySelector(".js_counts__player");
@@ -12,6 +13,7 @@ const totalPlayed = document.querySelector('.js-counts__total');
 let userWin = 0;
 let computerWin = 0;
 let totalGame = 0;
+
 
 //Function
 
@@ -112,6 +114,17 @@ function totalRounds() {
 
 
 }
+function resetGame(event) {
+    event.preventDefault();
+    playerResult.innerHTML = 0;
+    computerResult.innerHTML = 0;
+    totalPlayed.innerHTML = 0;
+    btnGameResult.innerHTML = "¡Vamos a jugar!"
+
+
+
+}
 
 //Listener
 playButton.addEventListener("click", handleClickGame);
+resetButton.addEventListener("click", resetGame);
